@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://usahomerelief.net/adict/intlTelInput.css">
-    <link rel="stylesheet" href="https://usahomerelief.net/adict/adict.css">
+    <link
+      rel="stylesheet"
+      href="https://usahomerelief.net/adict/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="https://usahomerelief.net/adict/adict.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +21,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <title>Mercury</title>
+    <title>East-1</title>
   </head>
 
   <body>
@@ -45,11 +48,12 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">
-            Каждый россиянин теперь может <span class="hero__title--part">зарабатывать от $410 в день</span> на
-            космических достижениях страны!
+            Каждый россиянин теперь может
+            <span class="hero__title--part">зарабатывать от $410 в день</span>
+            на космических достижениях страны!
           </h1>
           <div class="hero__video-container">
-             <video
+            <video
               id="myVideo"
               src="https://wtcprojects.com/video/tom_and_jerry.mp4"
               loop
@@ -62,11 +66,16 @@
 
       <!-- Форма -->
       <section class="form-section">
-        <div class="container form" >
-          <form method="POST" action="thanks/index.php" id="leadform2">
-          
-          <div class="input_wrapper">
-            <div>
+        <div class="container">
+          <form
+            method="POST"
+            action="thanks/index.php"
+            class="form"
+            name="application"
+          >
+            <h3 class="form__title">Заполните форму прямо сейчас!</h3>
+            <div class="input_wrapper">
+              <div>
                 <input name="f_name" placeholder="Имя" />
               </div>
               <div>
@@ -84,54 +93,401 @@
                   width: 85%;
                 }
               </style>
-              <input type="tel" name="phone" autocomplete="off" required>
-              <input type="hidden" name="phone2" class="phone2" autocomplete="off" required>
+              <input type="tel" name="phone" autocomplete="off" required />
+              <input
+                type="hidden"
+                name="phone2"
+                class="phone2"
+                autocomplete="off"
+                required
+              />
               <!-- Use variable from gep parameter @ first line - from php code in top of file -->
-              <input type="hidden" name="pixel_id" value="<?php echo $FacebookPixel?>">
-              <input type="hidden" name="page_lang"	value="<?php echo $page_lang?>">
+              <input
+                type="hidden"
+                name="pixel_id"
+                value="<?php echo $FacebookPixel?>"
+              />
+              <input
+                type="hidden"
+                name="page_lang"
+                value="<?php echo $page_lang?>"
+              />
               <input type="hidden" name="query" value="<?php echo $QUERY?>" />
               <input type="hidden" name="gp_id" value="<?php echo $gp?>" />
               <input type="hidden" name="hs_id" value="<?php echo $hs?>" />
               <!-- change to actual name of Landing. Name with uppercased letters -->
-              <input type="hidden" name="landing" value="NAME_OF_LANDING">
-            <button class="submit_btn" type="submit">
-              Подключиться
-            </button>
-          </div>
-        </form>
+              <input type="hidden" name="landing" value="NAME_OF_LANDING" />
+              <button class="form__btn" type="submit">ЗАБРАТЬ ПРИБЫЛЬ</button>
+            </div>
+          </form>
         </div>
       </section>
     </div>
 
     <!-- Уникальный контент страницы -->
     <main>
-      
+      <!-- Платежные системы -->
+      <section class="payment">
+        <div class="container">
+          <h2 class="payment__title">
+            <span class="payment__title--part">Выплаты гарантированы</span>
+            крупнейшими платежными системами в мире
+          </h2>
+          <img src="./images/payment.jpg" alt="" class="payment__img" />
+        </div>
+      </section>
+
+      <!-- Преимущества -->
+      <section class="benefit">
+        <div class="container">
+          <h2 class="benefit__title">Преимущества торговли на Восток-1</h2>
+          <div class="benefit__cards-direction">
+            <div class="card benefit__card">
+              <div class="card-body benefit__card-body">
+                <svg class="card-img-top benefit__img">
+                  <use
+                    href="./images/sprite.svg#icon-benefit-one"
+                    width="71"
+                    height="59"
+                  ></use>
+                </svg>
+                <p class="card-text benefit__card-text">
+                  Гарантированная прибыль <br /><span
+                    class="benefit__card-text--part"
+                    >без рисков</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card benefit__card">
+              <div class="card-body benefit__card-body">
+                <svg class="card-img-top benefit__img">
+                  <use
+                    href="./images/sprite.svg#icon-benefit-two"
+                    width="71"
+                    height="59"
+                  ></use>
+                </svg>
+                <p class="card-text benefit__card-text">
+                  <span class="benefit__card-text--part">Вывод денег</span> на
+                  карту любого банка
+                  <span class="benefit__card-text--part">в любой момент</span>
+                </p>
+              </div>
+            </div>
+            <div class="card benefit__card">
+              <div class="card-body benefit__card-body">
+                <svg class="card-img-top benefit__img">
+                  <use
+                    href="./images/sprite.svg#icon-benefit-three"
+                    width="71"
+                    height="59"
+                  ></use>
+                </svg>
+                <p class="card-text benefit__card-text">
+                  <span class="benefit__card-text--part">Низкий порог</span>
+                  входа. Любой может
+                  <span class="benefit__card-text--part">стать инвестором</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Лицензия -->
+      <section class="license">
+        <div class="container">
+          <h3 class="license__title">
+            Лицензия на осуществление брокерской <br />деятельности АО
+            <span class="license__title--part">“Восток-1”</span>
+          </h3>
+          <img src="./images/license.png" alt="license" class="license_img" />
+        </div>
+      </section>
+
+      <!-- Как зарабатывать -->
+      <section class="earn">
+        <div class="container">
+          <h2 class="earn__title">Как зарабатывать?</h2>
+
+          <ul class="list-group earn__list">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center earn__list-item"
+            >
+              <svg class="card-img-top earn__img" width="11" height="28">
+                <use href="./images/sprite.svg#icon-earn-one"></use>
+              </svg>
+              <span class="earn__list-item--part">Заполните форму</span> в
+              начале этой страницы
+            </li>
+
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center earn__list-item"
+            >
+              <svg class="card-img-top earn__img" width="16" height="28">
+                <use href="./images/sprite.svg#icon-earn-two"></use>
+              </svg>
+              <span class="earn__list-item--part">Дождитесь звонка</span>
+              консультанта Роскосмоса
+            </li>
+
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center earn__list-item"
+            >
+              <svg class="card-img-top earn__img" width="17" height="28">
+                <use href="./images/sprite.svg#icon-earn-three"></use>
+              </svg>
+              Инвестируйте и
+              <span class="earn__list-item--part"
+                >зарабатывайте от $4000 в месяц</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Космос -->
+      <section class="cosmos">
+        <div class="container">
+          <h3 class="cosmos__title">
+            Выберите проект Роскосмоса, на котором хотите зарабатывать
+          </h3>
+
+          <div class="cosmos__card-list">
+            <div class="card cosmos__card" style="width: 18rem">
+              <img
+                src="./images/cosm-one.png"
+                class="card-img-top cosmos__img"
+                alt="..."
+              />
+              <div class="card-body cosmos__card-body">
+                <h5 class="card-title cosmos__card-title">Экзомарс</h5>
+                <p class="card-text cosmos__card-text-first">
+                  От 158% прибыли каждую неделю
+                </p>
+                <p class="card-text cosmos__card-text-second">
+                  Программа по освоению Марса
+                </p>
+                <a href="#" class="btn btn-primary cosmos__card-btn"
+                  >Выбрать проект</a
+                >
+              </div>
+            </div>
+
+            <div class="card cosmos__card" style="width: 18rem">
+              <img
+                src="./images/cosm-two.png"
+                class="card-img-top cosmos__img"
+                alt="..."
+              />
+              <div class="card-body cosmos__card-body">
+                <h5 class="card-title cosmos__card-title">Высадка на Луне</h5>
+                <p class="card-text cosmos__card-text-first">
+                  От 100,000₽ в месяц
+                </p>
+                <p class="card-text cosmos__card-text-second">
+                  Цель проекта — постройка первой российской посещаемой лунной
+                  базы
+                </p>
+                <a href="#" class="btn btn-primary cosmos__card-btn"
+                  >Выбрать проект</a
+                >
+              </div>
+            </div>
+
+            <div class="card cosmos__card" style="width: 18rem">
+              <img
+                src="./images/cosm-three.png"
+                class="card-img-top cosmos__img"
+                alt="..."
+              />
+              <div class="card-body cosmos__card-body">
+                <h5 class="card-title cosmos__card-title">Резонанс</h5>
+                <p class="card-text cosmos__card-text-first">
+                  От 219% прибыли каждую неделю
+                </p>
+                <p class="card-text cosmos__card-text-second">
+                  Программа, нацеленная на изучение поверхности Солнца
+                </p>
+                <a href="#" class="btn btn-primary cosmos__card-btn"
+                  >Выбрать проект</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Инвестиции -->
+      <section class="invest">
+        <div class="container">
+          <h2 class="invest__title">СКОЛЬКО ВЫ ГОТОВЫ ИНВЕСТИРОВАТЬ?</h2>
+          <form onsubmit="handleGreet(event)" action="#" class="invest__form">
+            <p class="invest__form-text">Введите желаемую сумму</p>
+            <input
+              type="num"
+              name="num"
+              placeholder="(от 250$)"
+              required
+              class="invest__form-input"
+            />
+            <input
+              type="submit"
+              class="invest__form-btn"
+              value="Узнать заработок за 5 дней"
+            />
+          </form>
+        </div>
+      </section>
+
+      <!-- Скрытый блок -->
+      <section class="greet is-hidden">
+        <div class="container">
+          <h3 class="greet__title">Поздравляем!</h3>
+          <p class="greet__text">
+            Ваш заработок на выбранном проекте составит:
+          </p>
+          <div class="greet__earning">$1122</div>
+          <p class="greet__quest">Хотите забрать эти деньги сейчас?</p>
+          <img
+            src="./images/greet-register.png"
+            alt="register"
+            class="greet__register"
+          />
+
+          <form
+            method="POST"
+            action="thanks/index.php"
+            class="form"
+            name="application"
+            id="userPhoneForm"
+          >
+            <h3 class="form__title">Заполните форму прямо сейчас!</h3>
+            <div class="input_wrapper">
+              <div>
+                <input name="f_name" placeholder="Имя" />
+              </div>
+              <div>
+                <input name="l_name" placeholder="Фамилия" />
+              </div>
+              <div>
+                <input type="email" name="email" placeholder="Email" />
+              </div>
+              <style>
+                .iti__flag-container {
+                  z-index: 50;
+                }
+
+                .iti-mobile .iti__country-list {
+                  width: 85%;
+                }
+              </style>
+              <input type="tel" name="phone" autocomplete="off" required />
+              <input
+                type="hidden"
+                name="phone2"
+                class="phone2"
+                autocomplete="off"
+                required
+              />
+              <!-- Use variable from gep parameter @ first line - from php code in top of file -->
+              <input
+                type="hidden"
+                name="pixel_id"
+                value="<?php echo $FacebookPixel?>"
+              />
+              <input
+                type="hidden"
+                name="page_lang"
+                value="<?php echo $page_lang?>"
+              />
+              <input type="hidden" name="query" value="<?php echo $QUERY?>" />
+              <input type="hidden" name="gp_id" value="<?php echo $gp?>" />
+              <input type="hidden" name="hs_id" value="<?php echo $hs?>" />
+              <!-- change to actual name of Landing. Name with uppercased letters -->
+              <input type="hidden" name="landing" value="NAME_OF_LANDING" />
+              <button class="form__btn" type="submit">ЗАБРАТЬ ПРИБЫЛЬ</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Дмитрий Рогозин -->
+      <section class="dima">
+        <img
+          src="./images/dima.jpg"
+          alt="Dmitriy Rogozyn photo"
+          class="dima__photo"
+        />
+        <div class="container">
+          <div class="dima__resume">
+            <h2 class="dima__resume-title">Дмитрий Рогозин</h2>
+            <p class="dima__resume-pos">
+              Генеральный директор государственной корпорации по космической
+              деятельности «Роскосмос»
+            </p>
+            <p class="dima__resume-text">
+              «Мы открыли доступ к космическим ресурсам для всех желающих.
+              Российская космическая отрасль снова становится главной в мире. Мы
+              занимаемся реализацией более 10 глобальных проектов. За последний
+              год прибыль Роскосмоса выросла в 4 раза. <br /><br />Инвесторы
+              видят это и вкладывают большие деньги. Поэтому мы сделали так,
+              чтобы вложиться смог любой россиянин. Сегодня те, кто участвуют в
+              проектах Роскосмоса, получают $4000-8000 в месяц».
+            </p>
+          </div>
+          <button type="button" class="dima__btn">СТАТЬ УЧАСТНИКОМ</button>
+        </div>
+      </section>
     </main>
 
     <!-- Футер -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">
+          Все результаты работы индивидуальны и зависят от действий каждого
+          конкретного клиента ПАО <br />"Восток-1". <br />Copyright &#x000A9;
+          “Восток-1” 2020-2021 <br />
+          <span class="footer__text-part"
+            >ул. Тимура Фрунзе, д. 11, Москва, Россия, 119034, БЦ
+            «Демидов»</span
+          >
+        </p>
+      </div>
+    </footer>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     -->
-     <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://usahomerelief.net/adict/intlTelInput.js"></script>
     <script src="https://usahomerelief.net/adict/adict.js"></script>
     <script src="https://usahomerelief.net/adict/utils.js"></script>
     <!--add id="video" to the video tag before linking next script -->
     <script src="https://usahomerelief.net/video/video.js"></script>
-    
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+      <script>
+      const investSectRef = document.querySelector('.invest');
+      const investFormRef = document.querySelector('form.invest__form');
+      const investFormInputRef = document.querySelector('.invest__form-input');
+      const greetSectRef = document.querySelector('.greet');
+      const greetEarnRef = document.querySelector('.greet__earning');
+
+      // investFormRef.addEventListener('submit', handleGreet);
+
+      function handleGreet(e) {
+        e.preventDefault();
+        investSectRef.classList.add('is-hidden');
+        greetSectRef.classList.remove('is-hidden');
+
+        const inputVal = investFormInputRef.value;
+
+        const salary = inputVal * 12.5;
+
+        return (greetEarnRef.innerHTML = `$${salary}`);
+      }
+    </script>
   </body>
 </html>

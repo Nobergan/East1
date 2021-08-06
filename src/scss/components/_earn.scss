@@ -1,0 +1,41 @@
+.earn {
+  padding: 0 0 60px;
+}
+
+.earn__list-item {
+  position: relative;
+  min-height: 64px;
+
+  padding: 15px 35px 15px 49px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+
+  color: rgba(0, 0, 0, 0.8);
+
+  background: linear-gradient(90deg, #fa8334 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 5px;
+  border: none;
+
+  &--part {
+    display: contents;
+    font-weight: bold;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.earn__img {
+  position: absolute;
+  top: 17px;
+  left: 15px;
+
+  display: flex;
+
+  width: 20px;
+
+  margin-right: 20px;
+}

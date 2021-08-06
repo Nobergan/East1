@@ -1,0 +1,63 @@
+.benefit {
+  padding: 60px 0;
+
+  background-image: url('./images/benefits-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  &__cards-direction {
+      display: flex;
+      flex-direction: column;
+  }
+
+  &__card {
+    display: table-cell;
+    text-align: center;
+    padding: 62px 48px 48px;
+    min-height: 268px;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(53px);
+  }
+
+  &__card:not(:last-child) {
+      margin-bottom: 40px;
+  }
+
+  &__card-body {
+    padding: 0;
+  }
+
+  &__img {
+    max-width: 71px;
+    max-height: 59px;
+  }
+
+  &__card-text {
+    margin-top: 5px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  &__card-text--part {
+    font-weight: 800;
+  }
+}

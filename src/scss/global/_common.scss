@@ -93,6 +93,10 @@ button {
   display: none;
 }
 
+.not-hidden {
+  display: block;
+}
+
 .valid {
   border: 3px solid green;
 }

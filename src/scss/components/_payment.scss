@@ -1,0 +1,22 @@
+.payment {
+  padding: 32px 0 48px;
+  background: #f9fbfe;
+
+  &__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  &__title--part {
+      color: #FA8334;
+  }
+
+  &__img {
+      width: 100%;
+      margin-top: 36px;
+  }
+}

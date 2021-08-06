@@ -1,0 +1,21 @@
+.license {
+  padding: 60px 16px 40px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  &__title--part {
+    font-weight: 600;
+  }
+
+  &_img {
+    margin-top: 24px;
+    width: 100%;
+  }
+}

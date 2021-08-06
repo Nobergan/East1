@@ -1,9 +1,69 @@
-.form-section {
-  padding: 40px 0 60px;
+.greet {
+  padding: 60px 0;
+
+  background: linear-gradient(
+    0deg,
+    #fa8334 -41.08%,
+    rgba(196, 196, 196, 0) 100%
+  );
+
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    color: #005277;
+  }
+
+  &__text {
+    margin-top: 40px;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    color: #000000;
+  }
+
+  &__earning {
+    margin-top: 24px;
+
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    color: #fa8334;
+  }
+
+  &__quest {
+    margin-top: 41px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    color: #005277;
+  }
+
+  &__register {
+    width: 100%;
+    margin-top: 32px;
+  }
 }
+
+// Форма
 
 .form {
   padding: 60px 24px;
+  margin-top: 40px;
 
   background: radial-gradient(
       53.67% 23.32% at 53.67% 70.24%,
