@@ -5,6 +5,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+   @include for-size(desktop) {
+     padding: 120px 245px 140px;
+      background-image: url('./images/benefits-bg-desktop.jpg');
+    }
+
   &__title {
     font-weight: bold;
     font-size: 18px;
@@ -13,11 +18,22 @@
     text-align: center;
 
     color: #ffffff;
+
+    @include for-size(desktop) {
+      font-size: 36px;
+    }
   }
 
   &__cards-direction {
       display: flex;
       flex-direction: column;
+
+      @include for-size(desktop) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+      
   }
 
   &__card {
@@ -34,7 +50,36 @@
 
   &__card:not(:last-child) {
       margin-bottom: 40px;
+
+      @include for-size(desktop) {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
   }
+
+   &__card:nth-child(1) {
+     @include for-size(desktop) {
+       max-width: 277px;
+       max-height: 232px;
+      padding: 40px 42px;
+    }
+   }
+
+   &__card:nth-child(2) {
+     @include for-size(desktop) {
+       max-width: 374px;
+       min-height: 316px;
+      padding: 62px 62px 54px;
+    }
+   }
+   
+   &__card:nth-child(3) {
+     @include for-size(desktop) {
+       max-width: 277px;
+       max-height: 232px;
+      padding: 40px 13px;
+    }
+   }
 
   &__card-body {
     padding: 0;
@@ -55,6 +100,10 @@
     text-align: center;
 
     color: #ffffff;
+
+    @include for-size(desktop) {
+      font-size: 18px;
+    }
   }
 
   &__card-text--part {

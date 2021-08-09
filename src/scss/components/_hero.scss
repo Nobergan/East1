@@ -1,3 +1,17 @@
+.hero-flex {
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero {
+  @include for-size(desktop) {
+    max-width: 709px;
+    padding: 0 0 133px 0;
+  }
+}
+
 .hero__title {
   margin-top: 27px;
   margin-bottom: 0;
@@ -17,13 +31,34 @@
 
     text-transform: uppercase;
     color: #fa8334;
+
+    @include for-size(desktop) {
+      margin-top: 0;
+
+      font-size: 38px;
+      text-shadow: 0px 0px 15px #19253f, 0px 4px 34px #003349,
+        0px 4px 21px #000000;
+    }
+  }
+
+  @include for-size(desktop) {
+    margin-top: 0;
+    margin-bottom: 32px;
+
+    font-size: 32px;
+    text-shadow: 0px 0px 15px #19253f, 0px 4px 34px #003349,
+      0px 4px 21px #000000;
   }
 }
 
 .hero__video-container {
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .hero__video {
-    width: 100%;
+  width: 100%;
+
+  @include for-size(desktop) {
+    max-width: 709px;
+  }
 }

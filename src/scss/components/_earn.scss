@@ -1,5 +1,18 @@
 .earn {
   padding: 0 0 60px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+
+    color: #000000;
+
+    @include for-size(tablet) {
+      margin-left: 50px;
+      font-size: 36px;
+    }
+  }
 }
 
 .earn__list-item {
@@ -17,6 +30,12 @@
   background: linear-gradient(90deg, #fa8334 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 5px;
   border: none;
+
+  @include for-size(tablet) {
+    max-height: 124px;
+    padding: 37px 85px 31px 132px;
+    font-size: 20px;
+  }
 
   &--part {
     display: contents;
@@ -38,4 +57,13 @@
   width: 20px;
 
   margin-right: 20px;
+
+  @include for-size(tablet) {
+    width: 44px;
+    height: 56px;
+    margin-right: 40px;
+
+    top: 30px;
+    left: 48px;
+  }
 }

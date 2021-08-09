@@ -9,14 +9,41 @@
     text-align: center;
 
     color: #000000;
+
+    @include for-size(tablet) {
+      font-size: 36px;
+      line-height: 1.4;
+
+      width: 800px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__title--part {
-      color: #FA8334;
+    color: #fa8334;
+
+    @include for-size(tablet) {
+      font-size: 36px;
+      line-height: 1.4;
+    }
   }
 
   &__img {
+    width: 100%;
+    margin-top: 36px;
+
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+
+  &__img-desktop {
+    display: none;
+
+    @include for-size(tablet) {
+      display: block;
       width: 100%;
-      margin-top: 36px;
+    }
   }
 }

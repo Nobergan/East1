@@ -1,5 +1,9 @@
 .form-section {
   padding: 40px 0 60px;
+
+  @include for-size(desktop) {
+    padding: 0;
+  }
 }
 
 .form {
@@ -15,6 +19,17 @@
 
   border-radius: 10px;
 
+  @include for-size(tablet) {
+    max-width: 581px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include for-size(desktop) {
+    max-width: 381px;
+    padding: 80px 48px;
+  }
+
   &__title {
     font-weight: bold;
     font-size: 20px;
@@ -23,6 +38,10 @@
     text-align: center;
 
     color: #000000;
+
+    @include for-size(desktop) {
+      color: #ffffff;
+    }
   }
 
   &__btn {
@@ -54,6 +73,15 @@
     background: rgba(255, 255, 255, 0.27);
     border: 1px solid #000000;
     border-radius: 4px;
+
+    @include for-size(tablet) {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+      border: none !important;
+      min-height: 46px;
+      background: rgba(255, 255, 255, 0.27) !important;
+      border: 1px solid #ffffff !important;
+    }
   }
 
   & input:not(:last-child) {
@@ -68,5 +96,16 @@
     text-align: start;
 
     color: #000000;
+
+    @include for-size(desktop) {
+      color: #ffffff !important;
+    }
+  }
+}
+
+.iti__flag-container {
+  @include for-size(tablet) {
+    background: #e3e3e3;
+    border-radius: 4px 0px 0px 4px;
   }
 }

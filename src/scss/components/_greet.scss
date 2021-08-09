@@ -7,6 +7,14 @@
     rgba(196, 196, 196, 0) 100%
   );
 
+  & .container {
+    @include for-size(tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 75px 0;
+    }
+  }
+
   &__title {
     font-weight: bold;
     font-size: 24px;
@@ -15,6 +23,10 @@
     text-align: center;
 
     color: #005277;
+
+    @include for-size(tablet) {
+      font-size: 32px;
+    }
   }
 
   &__text {
@@ -27,6 +39,10 @@
     text-align: center;
 
     color: #000000;
+
+    @include for-size(tablet) {
+      font-size: 24px;
+    }
   }
 
   &__earning {
@@ -51,17 +67,59 @@
     text-align: center;
 
     color: #005277;
+
+    @include for-size(tablet) {
+      font-size: 32px;
+      margin-bottom: 0;
+    }
   }
 
   &__register {
     width: 100%;
     margin-top: 32px;
+
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+
+  &__register-desktop {
+    display: none;
+
+    @include for-size(tablet) {
+      display: block;
+      margin-top: 40px;
+      margin-left: -135px;
+    }
+  }
+
+  &__arrow-container {
+    position: relative;
+  }
+}
+
+.register-text-desktop {
+  position: absolute;
+  left: 200px;
+  bottom: 9px;
+  display: none;
+
+  @include for-size(tablet) {
+    display: block;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: 0.11em;
+
+    color: #ffffff;
   }
 }
 
 // Форма
 
-.form {
+.greet__form {
   padding: 60px 24px;
   margin-top: 40px;
 
@@ -75,6 +133,19 @@
 
   border-radius: 10px;
 
+  @include for-size(tablet) {
+    padding: 80px 48px;
+    margin-top: 0;
+    max-width: 381px;
+
+    background: radial-gradient(
+        125.35% 125.35% at 34.51% 95.24%,
+        rgba(255, 255, 255, 0.46) 0%,
+        rgba(250, 131, 52, 0.46) 100%
+      ),
+      rgba(255, 255, 255, 0.3);
+  }
+
   &__title {
     font-weight: bold;
     font-size: 20px;
@@ -83,6 +154,13 @@
     text-align: center;
 
     color: #000000;
+
+    @include for-size(tablet) {
+      width: 195px;
+      margin-right: auto;
+      margin-left: auto;
+      color: #005277;
+    }
   }
 
   &__btn {
@@ -103,6 +181,13 @@
   }
 }
 
+.form__btn {
+  @include for-size(tablet) {
+    padding: 9px 42px;
+    font-size: 18px !important;
+  }
+}
+
 .input_wrapper {
   margin-top: 24px;
 
@@ -114,6 +199,10 @@
     background: rgba(255, 255, 255, 0.27);
     border: 1px solid #000000;
     border-radius: 4px;
+
+    @include for-size(tablet) {
+      border: 1px solid rgba(0, 0, 0, 0.4) !important;
+    }
   }
 
   & input:not(:last-child) {
@@ -128,5 +217,19 @@
     text-align: start;
 
     color: #000000;
+
+    @include for-size(tablet) {
+      font-size: 14px;
+
+      color: rgba(0, 0, 0, 0.4) !important;
+    }
+  }
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  @include for-size(tablet) {
+    border: 1px solid rgba(0, 0, 0, 0.4) !important;
+    border-right: none !important;
+    height: 45px;
   }
 }

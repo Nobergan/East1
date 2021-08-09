@@ -5,6 +5,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include for-size(tablet) {
+    padding: 120px 150px;
+    background-image: url('./images/cosm-bg-desktop.jpg');
+  }
+
   &__title {
     font-weight: bold;
     font-size: 18px;
@@ -13,19 +18,33 @@
     text-align: center;
 
     color: #ffffff;
+
+    @include for-size(desktop) {
+      font-size: 36px;
+    }
   }
 }
 
 .cosmos__card-list {
   margin-top: 40px;
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
 
 .cosmos__card {
+  width: 100%;
   border: none;
   background: transparent;
 
   &:not(:last-child) {
     margin-bottom: 40px;
+  }
+
+  @include for-size(desktop) {
+    max-height: 517px;
+    margin-bottom: 0;
   }
 
   &-body {
@@ -35,6 +54,11 @@
     background: #ffffff;
     border-bottom-right-radius: 10%;
     border-bottom-left-radius: 10%;
+
+    @include for-size(desktop) {
+      width: 322px;
+      padding: 48px 40px;
+    }
   }
 
   &-title {
@@ -45,6 +69,10 @@
     text-align: center;
 
     color: #000000;
+
+    @include for-size(desktop) {
+      font-size: 20px;
+    }
   }
 
   &-text-first {
@@ -89,5 +117,15 @@
     background: #fa8334;
     border-radius: 8px;
     border: none;
+
+    @include for-size(desktop) {
+      font-size: 18px;
+    }
+  }
+}
+
+.cosmos__img {
+  @include for-size(desktop) {
+    width: 322px;
   }
 }

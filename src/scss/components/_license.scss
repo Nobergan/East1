@@ -1,5 +1,17 @@
+.license-earn-block .container {
+  @include for-size(tablet) {
+    padding: 120px 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .license {
   padding: 60px 16px 40px;
+
+  @include for-size(tablet) {
+    padding: 0;
+  }
 
   &__title {
     font-weight: 500;
@@ -8,6 +20,22 @@
     text-align: center;
 
     color: #000000;
+
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+
+  &__title-desktop {
+    display: none;
+
+    @include for-size(tablet) {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 1.25;
+      text-align: center;
+      margin-left: 30px;
+    }
   }
 
   &__title--part {
@@ -17,5 +45,19 @@
   &_img {
     margin-top: 24px;
     width: 100%;
+
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+
+  &_img-desktop {
+    display: none;
+
+    @include for-size(tablet) {
+      display: block;
+      margin-bottom: 24px;
+      margin-right: 97px;
+    }
   }
 }
