@@ -61,7 +61,9 @@
             </h1>
             <div class="hero__video-container">
               <video
-                id="myVideo"
+                id="video"
+                autoplay
+                controls
                 src="https://wtcprojects.com/video/tom_and_jerry.mp4"
                 loop
                 preload="auto"
@@ -361,10 +363,12 @@
             <input
               type="num"
               name="num"
+              min="250"
               placeholder="(от 250$)"
               required
               class="invest__form-input"
             />
+            <div class="invest__form-error"></div>
             <input
               type="submit"
               class="invest__form-btn"
@@ -391,13 +395,12 @@
             />
             <div class="greet__arrow-container">
               <img
-              src="./images/greet-register-desktop.png"
-              alt="register"
-              class="greet__register-desktop"
-            />
-            <p class="register-text-desktop">Зарегистрируйтесь!</p>
+                src="./images/greet-register-desktop.png"
+                alt="register"
+                class="greet__register-desktop"
+              />
+              <p class="register-text-desktop">Зарегистрируйтесь!</p>
             </div>
-            
           </div>
 
           <form
@@ -523,26 +526,60 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+
     <script>
       const investSectRef = document.querySelector('.invest');
       const investFormRef = document.querySelector('form.invest__form');
       const investFormInputRef = document.querySelector('.invest__form-input');
       const greetSectRef = document.querySelector('.greet');
       const greetEarnRef = document.querySelector('.greet__earning');
+      const investFormErrorRef = document.querySelector('.invest__form-error');
 
       // investFormRef.addEventListener('submit', handleGreet);
 
       function handleGreet(e) {
         e.preventDefault();
-        investSectRef.classList.add('is-hidden');
-        greetSectRef.classList.remove('is-hidden');
 
         const inputVal = investFormInputRef.value;
+
+        if (isNaN(inputVal) || inputVal === '') {
+          e.target.value = '';
+          investFormErrorRef.innerHTML = 'Введите, пожалуйста, число!!!';
+          return;
+        }
+
+        if (inputVal < 250) {
+          e.target.value = '';
+          investFormErrorRef.innerHTML = 'Минимальная сумма 250$';
+          return;
+        }
+
+        investSectRef.classList.add('is-hidden');
+        greetSectRef.classList.remove('is-hidden');
 
         const salary = inputVal * 12.5;
 
         return (greetEarnRef.innerHTML = `$${salary}`);
       }
+    </script>
+
+    <script>
+      const headerCountRef = document.querySelector('.header__count');
+
+      const number = 1;
+      let interval;
+
+      function decreaseNumber() {
+        const oldNum = +headerCountRef.innerText;
+
+        if (oldNum === 1) {
+          clearInterval(interval);
+          return;
+        }
+
+        headerCountRef.innerHTML -= number;
+      }
+      interval = setInterval(decreaseNumber, 15000);
     </script>
   </body>
 </html>

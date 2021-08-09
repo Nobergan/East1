@@ -45,6 +45,7 @@
   @include for-size(desktop) {
     max-height: 517px;
     margin-bottom: 0;
+    align-items: center;
   }
 
   &-body {

@@ -1,2 +1,2 @@
 import './styles.scss';
-// import './js/invest';
+// import './js/boo';

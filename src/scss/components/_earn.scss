@@ -9,6 +9,11 @@
     color: #000000;
 
     @include for-size(tablet) {
+      margin-left: 0;
+      font-size: 36px;
+    }
+
+    @include for-size(desktop) {
       margin-left: 50px;
       font-size: 36px;
     }

@@ -8,7 +8,13 @@
   );
 
   & .container {
-    @include for-size(tablet) {
+    // @include for-size(tablet) {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   padding: 75px 0;
+    // }
+
+    @include for-size(desktop) {
       display: flex;
       justify-content: space-between;
       padding: 75px 0;
@@ -78,7 +84,7 @@
     width: 100%;
     margin-top: 32px;
 
-    @include for-size(tablet) {
+    @include for-size(desktop) {
       display: none;
     }
   }
@@ -86,7 +92,7 @@
   &__register-desktop {
     display: none;
 
-    @include for-size(tablet) {
+    @include for-size(desktop) {
       display: block;
       margin-top: 40px;
       margin-left: -135px;
@@ -104,7 +110,7 @@
   bottom: 9px;
   display: none;
 
-  @include for-size(tablet) {
+  @include for-size(desktop) {
     display: block;
 
     font-style: normal;
@@ -133,7 +139,7 @@
 
   border-radius: 10px;
 
-  @include for-size(tablet) {
+  @include for-size(desktop) {
     padding: 80px 48px;
     margin-top: 0;
     max-width: 381px;
@@ -155,7 +161,7 @@
 
     color: #000000;
 
-    @include for-size(tablet) {
+    @include for-size(desktop) {
       width: 195px;
       margin-right: auto;
       margin-left: auto;
@@ -182,7 +188,7 @@
 }
 
 .form__btn {
-  @include for-size(tablet) {
+  @include for-size(desktop) {
     padding: 9px 42px;
     font-size: 18px !important;
   }
@@ -200,7 +206,7 @@
     border: 1px solid #000000;
     border-radius: 4px;
 
-    @include for-size(tablet) {
+    @include for-size(desktop) {
       border: 1px solid rgba(0, 0, 0, 0.4) !important;
     }
   }
@@ -218,7 +224,7 @@
 
     color: #000000;
 
-    @include for-size(tablet) {
+    @include for-size(desktop) {
       font-size: 14px;
 
       color: rgba(0, 0, 0, 0.4) !important;
@@ -227,7 +233,7 @@
 }
 
 .iti--separate-dial-code .iti__selected-flag {
-  @include for-size(tablet) {
+  @include for-size(desktop) {
     border: 1px solid rgba(0, 0, 0, 0.4) !important;
     border-right: none !important;
     height: 45px;

@@ -19,14 +19,16 @@
 
   border-radius: 10px;
 
+  
+
   @include for-size(tablet) {
-    max-width: 581px;
+    max-width: 381px;
     margin-left: auto;
     margin-right: auto;
+    
   }
 
   @include for-size(desktop) {
-    max-width: 381px;
     padding: 80px 48px;
   }
 
@@ -74,7 +76,7 @@
     border: 1px solid #000000;
     border-radius: 4px;
 
-    @include for-size(tablet) {
+    @include for-size(desktop) {
       padding-top: 12px !important;
       padding-bottom: 12px !important;
       border: none !important;
@@ -104,8 +106,13 @@
 }
 
 .iti__flag-container {
-  @include for-size(tablet) {
+  @include for-size(desktop) {
     background: #e3e3e3;
     border-radius: 4px 0px 0px 4px;
   }
+}
+
+form input.err:focus,
+form input.err {
+  margin-bottom: 0 !important;
 }
