@@ -1,3 +1,17 @@
+<?php
+	$FacebookPixel = $_GET['p'];
+	$Ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	$http_lang = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+	$fd = fopen("../logs.txt", 'a+');
+	$date = date('d.m.Y, H:i:s');
+	$arr = $date.'|'.$_SERVER['HTTP_CF_IPCOUNTRY'].'|'.$http_lang.'|'.$_SERVER['HTTP_REFERER'].'|'.$_SERVER['HTTP_USER_AGENT'].'|'.$Ip."|land \r\n";
+	fwrite($fd, $arr);
+	fclose($fd);
+	$gp = $_GET['gp'];
+  $hs = $_GET['hs'];
+  $page_lang = "ru";
+	$QUERY=$_SERVER["QUERY_STRING"];
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -131,7 +145,7 @@
                 <input type="hidden" name="gp_id" value="<?php echo $gp?>" />
                 <input type="hidden" name="hs_id" value="<?php echo $hs?>" />
                 <!-- change to actual name of Landing. Name with uppercased letters -->
-                <input type="hidden" name="landing" value="NAME_OF_LANDING" />
+                <input type="hidden" name="landing" value="VOSTOK1" />
                 <button class="form__btn" type="submit">ЗАБРАТЬ ПРИБЫЛЬ</button>
               </div>
             </form>
